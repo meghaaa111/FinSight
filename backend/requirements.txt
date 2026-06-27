@@ -1,0 +1,15 @@
+fastapi==0.109.0
+uvicorn==0.27.0
+python-multipart==0.0.6
+pydantic==2.5.3
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+google-generativeai==0.8.6
+chromadb==0.4.22
+langchain==0.1.4
+langchain-community==0.0.16
+PyMuPDF==1.23.8
+beautifulsoup4==4.12.3
+requests==2.34.2
+lxml==5.1.0
+tiktoken==0.5.2
