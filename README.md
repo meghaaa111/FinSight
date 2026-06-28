@@ -85,10 +85,19 @@ FinSight simulates the document intelligence infrastructure used by **investment
 
 ---
 
-✨ Key Features
+## ✨ Key Features
 
-CategoryFeatureDescription📄 DocumentPDF UploadUpload any financial PDF directly from the browser📄 DocumentSmart ChunkingOverlapping chunks preserve cross-paragraph context📄 DocumentSource CitationsEvery answer references the exact page it came from🤖 AIGemini 2.5 FlashGoogle's reasoning-optimized model as the answer engine🤖 AIHallucination ReductionModel responds only using retrieved document context🔎 SearchSentence Transformersall-MiniLM-L6-v2 for dense semantic embeddings🔎 SearchTop-K RetrievalReturns the most semantically relevant chunks per query🖥️ UIChat InterfaceConversational Q&A with source panel alongside answers⚙️ BackendFastAPIHigh-performance async Python API with OpenAPI docs
-
+| Category | Feature | Description |
+|---|---|---|
+| 📄 **Document** | PDF Upload | Upload any financial PDF directly from the browser |
+| 📄 **Document** | Smart Chunking | Overlapping chunks preserve cross-paragraph context |
+| 📄 **Document** | Source Citations | Every answer references the exact page it came from |
+| 🤖 **AI** | Gemini 2.5 Flash | Google's reasoning-optimized model as the answer engine |
+| 🤖 **AI** | Hallucination Reduction | Model responds *only* using retrieved document context |
+| 🔎 **Search** | Sentence Transformers | `all-MiniLM-L6-v2` for dense semantic embeddings |
+| 🔎 **Search** | Top-K Retrieval | Returns the most semantically relevant chunks per query |
+| 🖥️ **UI** | Chat Interface | Conversational Q&A with source panel alongside answers |
+| ⚙️ **Backend** | FastAPI | High-performance async Python API with OpenAPI docs |
 
 
 ---
