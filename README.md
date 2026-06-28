@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="assets/finsight-header.png" width="900" alt="FinSight">
-</div>
 
 <br />
 
