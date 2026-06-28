@@ -51,9 +51,6 @@
 
 <br /><br />
 
-> **📁 To add your demo:** Record your screen, export as `demo.gif`, and place it at `assets/demo.gif`.  
-> Recommended tools: [Kap](https://getkap.co/) (macOS), [ScreenToGif](https://www.screentogif.com/) (Windows), or [Peek](https://github.com/phw/peek) (Linux).
-
 </div>
 
 ---
