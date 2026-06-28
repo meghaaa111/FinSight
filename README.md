@@ -58,7 +58,7 @@
 
 ---
 
-## 🧠 Why FinSight?
+##  Why FinSight?
 
 ### The Problem with Asking AI About Finance
 
@@ -199,59 +199,6 @@ flowchart LR
     style QUERY fill:#0f172a,stroke:#1e3a5f,color:#93c5fd
 ```
 
----
-
-## 📖 How RAG Works
-
-<details>
-<summary><b>Click to expand — Deep Dive into Retrieval-Augmented Generation</b></summary>
-
-<br />
-
-RAG is not a single technique — it is an architectural pattern that fundamentally changes how language models interact with information.
-
-### 1. 🔪 Chunking
-
-Large documents cannot fit inside a model's context window. FinSight breaks documents into overlapping text segments (chunks). Overlap ensures that important sentences that span chunk boundaries are never lost.
-
-```
-[...Paragraph A...] [OVERLAP] [...Paragraph B...]
-               ↑ chunk 1  ↑ chunk 2
-```
-
-### 2. 🧬 Embeddings
-
-Each chunk is passed through `all-MiniLM-L6-v2`, a Sentence Transformer model, which converts natural language into a 384-dimensional dense vector — a numerical fingerprint of the text's *meaning*.
-
-```
-"Revenue increased by 12% year-over-year" → [0.21, -0.84, 0.37, ... 384 values]
-```
-
-### 3. 🗃️ Vector Storage
-
-All chunk embeddings are stored in ChromaDB alongside their source metadata (document name, page number, chunk index). ChromaDB enables fast approximate nearest-neighbour search.
-
-### 4. 🔍 Semantic Search
-
-When a user asks a question, the query is embedded using the same model. ChromaDB computes cosine similarity between the query vector and all stored chunk vectors, returning the **Top-K most semantically relevant** chunks — even if the query uses different words than the document.
-
-```
-Query: "How did operating expenses change?"
-↓  Semantic similarity search
-Retrieved: "Total operating costs rose 8.3% driven by headcount growth..."
-```
-
-### 5. 📎 Context Grounding
-
-The Top-K chunks are assembled into a structured prompt alongside strict instructions: *answer only using the provided context, cite sources explicitly, and state if the answer is not present*. This is the grounding step.
-
-### 6. 🛡️ Hallucination Reduction
-
-Because the model only sees document-sourced context, it cannot invent financial figures. If the answer is not in the retrieved chunks, the model says so — rather than fabricating a plausible-sounding response.
-
-</details>
-
----
 
 ## 🛠️ Tech Stack
 
@@ -424,93 +371,6 @@ The React app will be live at `http://localhost:5173`.
 
 ---
 
-## 💬 Example Questions
-
-Once a document is uploaded, try asking:
-
-```
-📊 "What was the total revenue for fiscal year 2023?"
-📉 "What risk factors did management disclose?"
-💰 "How did operating expenses change compared to the prior year?"
-🏦 "What is the company's current debt-to-equity ratio?"
-📋 "Summarize the key highlights from the CEO's letter to shareholders."
-🔍 "What did the auditors flag in their report?"
-📈 "What is management's guidance for the next quarter?"
-⚖️  "Are there any pending legal proceedings disclosed in this filing?"
-```
-
----
-
-## 🧩 Engineering Challenges
-
-Building FinSight surfaced several non-trivial engineering problems:
-
-**Chunk Size Calibration**  
-Too-small chunks lose sentence context and retrieve irrelevant fragments. Too-large chunks exceed context windows and dilute relevance scores. Finding the right chunk size + overlap ratio required empirical testing across multiple document types.
-
-**Retrieval Accuracy vs. Speed**  
-Top-K retrieval must balance precision with latency. Retrieving too many chunks adds noise to the prompt; too few risks missing the relevant passage. A configurable `TOP_K` parameter with document-aware tuning was implemented.
-
-**Context Window Management**  
-Gemini has a large context window, but stuffing it with irrelevant chunks still degrades response quality. Strict chunk scoring and ordering by relevance score ensures only the highest-signal context reaches the model.
-
-**Semantic Mismatch**  
-Queries like "earnings growth" must match chunks containing "revenue increased." Pure keyword search fails here. Sentence Transformers solve this by encoding semantic meaning rather than lexical tokens — but required careful model selection and normalization.
-
-**Prompt Design for Finance**  
-Generic prompts produce generic answers. FinSight's system prompt is engineered to enforce: citation-first response structure, refusal to speculate beyond retrieved context, and explicit handling of "not found in document" cases.
-
----
-
-## 🎓 What I Learned
-
-Building FinSight was a deep dive into production AI engineering. Here's what this project taught me:
-
-- **RAG Architecture** — Designing and implementing a full retrieval-augmented pipeline from scratch, understanding where each component fits and why
-- **Vector Databases** — How ChromaDB stores and retrieves embeddings, and the mechanics of approximate nearest-neighbour search at scale
-- **Embedding Models** — The difference between general-purpose and domain-specific sentence transformers, and how embedding quality directly determines retrieval quality  
-- **FastAPI** — Building a production-style async Python API with proper route separation, error handling, and auto-generated documentation
-- **React** — Structuring a clean component hierarchy for a document-intelligence UI with async state management
-- **Prompt Engineering** — Writing system prompts that constrain model behaviour in high-stakes, citation-required scenarios
-- **Semantic Search** — Why cosine similarity over dense vectors outperforms keyword search for natural language queries
-- **Financial AI** — The unique requirements of AI in financial contexts: auditability, source attribution, and zero tolerance for hallucination
-
----
-
-## 🗺️ Roadmap
-
-```
-Phase 1 — Core (Complete)
-```
-- [x] PDF upload and text extraction
-- [x] Overlapping chunking strategy
-- [x] Sentence Transformer embeddings
-- [x] ChromaDB vector store integration
-- [x] Semantic Top-K retrieval
-- [x] Gemini-powered answer generation
-- [x] Source citation display
-- [x] React frontend with chat UI
-
-```
-Phase 2 — In Progress
-```
-- [ ] 🔦 OCR support for scanned PDFs (Tesseract integration)
-- [ ] 📚 Multi-document retrieval — query across multiple uploaded filings
-- [ ] 💾 Conversation memory — maintain context across follow-up questions
-- [ ] 🌊 Streaming responses — token-by-token answer rendering
-
-```
-Phase 3 — Planned
-```
-- [ ] 🌲 Pinecone integration as production vector database alternative
-- [ ] 🔐 Authentication — user accounts and private document sessions
-- [ ] 🖍️ Citation highlighting — highlight exact source passage in PDF viewer
-- [ ] ☁️ AWS deployment — ECS containerized backend + S3 document storage
-- [ ] 📊 Analytics dashboard — query logs, retrieval metrics, usage stats
-- [ ] 🧪 Evaluation framework — automated RAG quality scoring with ground truth
-
----
-
 ## 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
@@ -525,19 +385,19 @@ You are free to use, modify, and distribute this project for personal, academic,
 
 <br />
 
-**Built with precision by [Your Name](https://github.com/yourusername)**
+**Built with precision by Megha S B (https://github.com/meghaaa111)**
 
 *AI Engineer · Full Stack Developer · Open Source Contributor*
 
 <br />
 
-[![GitHub](https://img.shields.io/badge/GitHub-yourusername-181717?style=for-the-badge&logo=github)](https://github.com/yourusername)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yourusername)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-8B5CF6?style=for-the-badge&logo=globe&logoColor=white)](https://yourportfolio.dev)
+[![GitHub](https://img.shields.io/badge/GitHub-yourusername-181717?style=for-the-badge&logo=github)](https://github.com/meghaaa111)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/megha-s-b-aiml/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-8B5CF6?style=for-the-badge&logo=globe&logoColor=white)](https://meghaaa111.github.io/)
 
 <br />
 
-*If FinSight was useful or interesting to you, consider giving it a ⭐ — it helps others find the project.*
+*If FinSight was useful or interesting to you, consider giving it a ⭐ - it helps others find the project.*
 
 <br />
 
@@ -545,6 +405,6 @@ You are free to use, modify, and distribute this project for personal, academic,
 
 <sub>Built with 🧠 Gemini · 🗃️ ChromaDB · ⚛️ React · 🚀 FastAPI</sub>
 
-<sub>© 2025 Your Name — MIT Licensed</sub>
+<sub>© 2025 Megha S B — MIT Licensed</sub>
 
 </div>
