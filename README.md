@@ -311,7 +311,7 @@ You are free to use, modify, and distribute this project for personal, academic,
 
 <br />
 
-[![GitHub](https://img.shields.io/badge/GitHub-yourusername-181717?style=for-the-badge&logo=github)](https://github.com/meghaaa111)
+[![GitHub](https://img.shields.io/badge/GitHub-meghaaa111-181717?style=for-the-badge&logo=github)](https://github.com/meghaaa111)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/megha-s-b-aiml/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-8B5CF6?style=for-the-badge&logo=globe&logoColor=white)](https://meghaaa111.github.io/)
 
@@ -323,8 +323,8 @@ You are free to use, modify, and distribute this project for personal, academic,
 
 ---
 
-<sub>Built with 🧠 Gemini · 🗃️ ChromaDB · ⚛️ React · 🚀 FastAPI</sub>
+<sub>Built with ✨ Gemini · 🗃️ ChromaDB · ⚛️ React · 🚀 FastAPI</sub>
 
-<sub>© 2025 Megha S B — MIT Licensed</sub>
+<sub>© 2026 Megha S B - MIT Licensed</sub>
 
 </div>
