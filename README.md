@@ -1,4 +1,4 @@
-
+<div align="center">
 
 <br />
 
@@ -10,7 +10,6 @@
                                     ██║     ██║██║ ╚████║███████║██║╚██████╔╝██║  ██║   ██║   
                                     ╚═╝     ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝  
 ```
-<div align="center">
   
 ### **AI-Powered Financial Document Intelligence**
 
