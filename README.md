@@ -85,54 +85,11 @@ FinSight simulates the document intelligence infrastructure used by **investment
 
 ---
 
-## ✨ Key Features
+✨ Key Features
 
-### 📄 Document Intelligence
+CategoryFeatureDescription📄 DocumentPDF UploadUpload any financial PDF directly from the browser📄 DocumentSmart ChunkingOverlapping chunks preserve cross-paragraph context📄 DocumentSource CitationsEvery answer references the exact page it came from🤖 AIGemini 2.5 FlashGoogle's reasoning-optimized model as the answer engine🤖 AIHallucination ReductionModel responds only using retrieved document context🔎 SearchSentence Transformersall-MiniLM-L6-v2 for dense semantic embeddings🔎 SearchTop-K RetrievalReturns the most semantically relevant chunks per query🖥️ UIChat InterfaceConversational Q&A with source panel alongside answers⚙️ BackendFastAPIHigh-performance async Python API with OpenAPI docs
 
-| Feature | Description |
-|---|---|
-| 📤 **PDF Upload** | Upload any financial PDF directly from the browser |
-| 🔍 **Text Extraction** | Precision extraction via PyPDF with cleaning and normalization |
-| ✂️ **Smart Chunking** | Overlapping chunk strategy preserves cross-paragraph context |
-| 📑 **Source Citations** | Every answer references the exact page it came from |
-| 📊 **Multi-Format Support** | SEC 10-Ks, earnings releases, annual reports, investor presentations |
 
-### 🤖 AI & Language Model
-
-| Feature | Description |
-|---|---|
-| 🧬 **Gemini 2.5 Flash** | Google's latest fast, reasoning-optimized model as the answer engine |
-| 📎 **Context-Grounded Answers** | Model responds *only* using retrieved document context |
-| 🛡️ **Hallucination Reduction** | RAG architecture prevents the model from fabricating financial data |
-| 🎯 **Prompt Engineering** | Custom system prompts enforce citation-first, factual-only responses |
-
-### 🔎 Semantic Search
-
-| Feature | Description |
-|---|---|
-| 🧲 **Sentence Transformers** | `all-MiniLM-L6-v2` encodes both documents and queries into dense vectors |
-| 🗃️ **ChromaDB Vector Store** | Local, persistent vector database for fast similarity retrieval |
-| 📐 **Top-K Retrieval** | Returns the K most semantically relevant chunks per query |
-| 🔁 **Query Embedding** | User questions are embedded in real-time and matched to stored chunks |
-
-### 🖥️ Frontend & UX
-
-| Feature | Description |
-|---|---|
-| ⚛️ **React 18** | Component-based SPA with clean state management |
-| 🎨 **Tailwind CSS** | Utility-first styling — responsive and polished |
-| 💬 **Chat Interface** | Conversational Q&A experience with document context |
-| 📋 **Source Panel** | Surfaced source chunks and page numbers alongside every answer |
-| ⚡ **Axios HTTP Client** | Non-blocking async requests to the FastAPI backend |
-
-### ⚙️ Backend & Infrastructure
-
-| Feature | Description |
-|---|---|
-| 🚀 **FastAPI** | High-performance Python API with automatic OpenAPI docs |
-| 🐍 **Python 3.11+** | Modern async-compatible backend |
-| 🔐 **Environment Variables** | `python-dotenv` for secure API key management |
-| 🐳 **Docker Ready** | Containerization support planned (see roadmap) |
 
 ---
 
