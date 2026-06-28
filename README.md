@@ -1,4 +1,8 @@
-# FinSight - Financial Intelligence Platform
+# 🚀 FinSight
+### AI-Powered Financial Document Intelligence using RAG
+
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+
 
 A production-grade RAG (Retrieval-Augmented Generation) powered question-answering system for financial documents. Built with FastAPI backend and React frontend.
 
