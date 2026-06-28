@@ -189,7 +189,7 @@ flowchart LR
 
 | Home | Upload |
 |:---:|:---:|
-| <img src="C:\Users\megha\OneDrive\Pictures\Screenshots\Screenshot 2026-06-27 194846.png" width="420" alt="Home Screen" /> | <img src="assets/screenshot-upload.png" width="420" alt="Upload Screen" /> |
+| <img src="assets/screenshot-home.png" width="420" alt="Home Screen" /> | <img src="assets/screenshot-upload.png" width="420" alt="Upload Screen" /> |
 | *Landing page with document overview* | *PDF drag-and-drop ingestion panel* |
 
 | Chat | Retrieved Sources |
