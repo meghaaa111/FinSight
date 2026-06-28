@@ -13,7 +13,7 @@
   
 ### **AI-Powered Financial Document Intelligence**
 
-*Ask questions. Get answers. Grounded in your documents — not AI guesswork.*
+*Ask questions. Get answers. Grounded in your documents - not AI guesswork.*
 
 <br />
 
@@ -35,7 +35,7 @@
 <br />
 
 > **FinSight** is a production-grade Retrieval-Augmented Generation (RAG) platform purpose-built for financial documents.  
-> Upload SEC 10-Ks, earnings reports, and annual filings — then query them in natural language with answers **sourced directly from the document**, not hallucinated by the model.
+> Upload SEC 10-Ks, earnings reports, and annual filings - then query them in natural language with answers **sourced directly from the document**, not hallucinated by the model.
 
 <br />
 
