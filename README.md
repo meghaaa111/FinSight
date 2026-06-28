@@ -1,4 +1,4 @@
-<div align="center">
+
 
 <br />
 
@@ -10,7 +10,8 @@
                                     ██║     ██║██║ ╚████║███████║██║╚██████╔╝██║  ██║   ██║   
                                     ╚═╝     ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝  
 ```
-
+<div align="center">
+  
 ### **AI-Powered Financial Document Intelligence**
 
 *Ask questions. Get answers. Grounded in your documents — not AI guesswork.*
