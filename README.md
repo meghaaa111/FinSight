@@ -183,51 +183,6 @@ flowchart LR
 
 ---
 
-## 📁 Project Structure
-
-```
-finsight/
-│
-├── backend/
-│   ├── main.py                 # FastAPI app entry point
-│   ├── routes/
-│   │   ├── upload.py           # PDF upload & ingestion endpoint
-│   │   └── query.py            # Question answering endpoint
-│   ├── services/
-│   │   ├── pdf_processor.py    # PyPDF extraction & text cleaning
-│   │   ├── chunker.py          # Overlapping chunk strategy
-│   │   ├── embedder.py         # Sentence Transformer embeddings
-│   │   ├── vector_store.py     # ChromaDB interface
-│   │   └── llm.py              # Gemini API integration
-│   ├── utils/
-│   │   └── helpers.py          # Shared utility functions
-│   ├── requirements.txt
-│   └── .env                    # API keys (never commit this)
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── UploadPanel.jsx     # PDF drag-and-drop upload
-│   │   │   ├── ChatInterface.jsx   # Q&A chat window
-│   │   │   └── SourceViewer.jsx    # Retrieved chunk display
-│   │   ├── api/
-│   │   │   └── client.js           # Axios API calls
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   ├── tailwind.config.js
-│   └── package.json
-│
-├── assets/
-│   └── demo.gif                # Demo recording (add your own)
-│
-├── .gitignore
-├── README.md
-└── LICENSE
-```
-
----
-
 ## 📸 Screenshots
 
 <div align="center">
@@ -352,7 +307,7 @@ You are free to use, modify, and distribute this project for personal, academic,
 
 **Built with precision by Megha S B (https://github.com/meghaaa111)**
 
-*AI Engineer · Full Stack Developer · Open Source Contributor*
+*AI Engineer · Data Scientist · Open Source Contributor*
 
 <br />
 
