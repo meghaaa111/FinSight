@@ -99,7 +99,6 @@ FinSight simulates the document intelligence infrastructure used by **investment
 | 🖥️ **UI** | Chat Interface | Conversational Q&A with source panel alongside answers |
 | ⚙️ **Backend** | FastAPI | High-performance async Python API with OpenAPI docs |
 
-
 ---
 
 ## 🏛️ Architecture
